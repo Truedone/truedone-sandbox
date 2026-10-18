@@ -1,0 +1,12 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import * as smoke from "../src/smoke/mul.mjs";
+test("v1 is 1", () => { assert.equal(smoke.v1, 1); });
+test("v2 is 2", () => { assert.equal(smoke.v2, 2); });
+test("v3 is 3", () => { assert.equal(smoke.v3, 3); });
+test("v4 is 4", () => { assert.equal(smoke.v4, 4); });
+test("v5 is 5", () => { assert.equal(smoke.v5, 5); });
+test("v6 is 6", () => { assert.equal(smoke.v6, 6); });
+test("v7 is 7", () => { assert.equal(smoke.v7, 7); });
+test("v8 is 8", () => { assert.equal(smoke.v8, 8); });
+test("v9 is 9", () => { assert.equal(smoke.v9, 9); });
