@@ -7,3 +7,7 @@ def test_add():
 
 def test_mean(numbers):
     assert calc.mean(numbers) == 2.5
+
+
+def test_add_zero():
+    assert calc.add(0, 0) == 0
