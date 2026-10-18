@@ -4,3 +4,4 @@ import * as smoke from "../src/smoke/mul.mjs";
 test("mul multiplies", () => {
   assert.equal(smoke.mul(2, 3), 6);
 });
+test("v6 is 6", () => { assert.equal(smoke.v6, 6); });
