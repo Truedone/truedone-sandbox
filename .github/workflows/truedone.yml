@@ -18,7 +18,9 @@ jobs:
       - run: npm ci --prefix vitest
       - run: python -m pip install pytest==9.0.3
       # PLACEHOLDER until OPS-07 publishes the action: the sha and the tag become the published release's.
-      - uses: mgillr/truedone-action@0000000000000000000000000000000000000000 # v1.0.0
+      # The action from the main repository, pinned to a commit on its main, until Truedone/truedone-action carries v0.1.0 (REL-P6);
+      # the smoke (tools/smoke-action.mjs) re-pins this line in the branch it seeds.
+      - uses: Truedone/truedone/packages/action@b3a2d7081d69e8de822c5847fe0ce523c593aabc
       - run: npm test --prefix node-test
       - run: npm test --prefix vitest
       - run: python -m pytest
