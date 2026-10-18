@@ -17,10 +17,9 @@ jobs:
           python-version: '3.12'
       - run: npm ci --prefix vitest
       - run: python -m pip install pytest==9.0.3
-      # PLACEHOLDER until OPS-07 publishes the action: the sha and the tag become the published release's.
-      # The action from the main repository, pinned to a commit on its main, until Truedone/truedone-action carries v0.1.0 (REL-P6);
-      # the smoke (tools/smoke-action.mjs) re-pins this line in the branch it seeds.
-      - uses: Truedone/truedone/packages/action@b3a2d7081d69e8de822c5847fe0ce523c593aabc
+      # The action from Truedone/truedone's main branch, so each sandbox pull request runs the action as it is on main
+      # now, and the post-merge gate tests a newly merged action. The sandbox is a test bed; production users pin a tag.
+      - uses: Truedone/truedone/packages/action@main
       - run: npm test --prefix node-test
       - run: npm test --prefix vitest
       - run: python -m pytest
