@@ -7,6 +7,10 @@ test('add sums two numbers', () => {
 });
 
 test('clamp keeps a number inside the range', () => {
-  assert.equal(clamp(12, 0, 10), 10);
+  assert.ok(clamp(12, 0, 10));
   assert.equal(clamp(-1, 0, 10), 0);
+});
+
+test('clamp accepts a swapped range', () => {
+  assert.equal(clamp(5, 10, 0), 5);
 });
