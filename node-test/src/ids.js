@@ -2,9 +2,9 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-// a short id from a prefix and a number
+// a short id from a prefix and a number, zero-padded to three digits so ids sort in order
 export function makeId(prefix, n) {
-  return `${prefix}${n}`;
+  return `${prefix}${String(n).padStart(3, '0')}`;
 }
 
 // a stamp that counts its calls in a file, so every second process gets it wrong
