@@ -19,7 +19,7 @@ jobs:
       - run: python -m pip install pytest==9.0.3
       # The action from Truedone/truedone's main branch, so each sandbox pull request runs the action as it is on main
       # now, and the post-merge gate tests a newly merged action. The sandbox is a test bed; production users pin a tag.
-      - uses: Truedone/truedone/packages/action@3af97c5dbda4933e8b8f2b6e877e8a7d3421c1ff
+      - uses: Truedone/truedone/packages/action@main
       - run: npm test --prefix node-test
       - run: npm test --prefix vitest
       - run: python -m pytest
